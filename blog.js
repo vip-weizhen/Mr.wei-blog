@@ -33,14 +33,17 @@ const OPT = { //网站配置
   "cacheTime" : 60*60*24*2, //文章在浏览器的缓存时长(秒),建议=文章更新频率
   "html404" : `<b>404</b>`,//404页面代码
   "codeBeforHead":`
-  <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
   `,//其他代码,显示在</head>前
   "codeBeforBody":`
   `,//其他代码,显示在</body>前
   "commentCode":`
+    <div id="waline"></div>
   <script>
-    //文章浏览页 添加编辑直达功能
-    $(".entry-info").append('<a style="float:right;margin-left:5px;" href="'+location.href.replace('/article/','/admin/edit/')+'" target="_blank">编辑</a>')
+    Waline({
+      el: '#waline',
+      serverURL: 'https://blog-api-iuk6u1ymk-vip-weizhen.vercel.app',
+    });
   </script>
   `,//评论区代码
   "widgetOther":`
