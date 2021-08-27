@@ -35,10 +35,9 @@ const OPT = { //网站配置
   "codeBeforHead":`
   <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
   `,//其他代码,显示在</head>前
-  "codeBeforBody":`
+  "codeBeforBody":`<div id="waline"></div>
   `,//其他代码,显示在</body>前
   "commentCode":`
-    <div id="waline"></div>
   <script>
     Waline({
       el: '#waline',
