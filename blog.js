@@ -42,7 +42,7 @@ const OPT = { //网站配置
    <script>
     Waline({
       el: '#waline',
-      serverURL: 'https://blog-api-iuk6u1ymk-vip-weizhen.vercel.app',
+      serverURL: 'https://blog-api-sable.vercel.app',
     });
   </script>
   `,//评论区代码
